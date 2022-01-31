@@ -30,12 +30,14 @@
     <tr>
         <th>State</th>
         <th>Country</th>
+        <th>Lat/Long</th>
         <th>Total Cases Reported</th>
         <th>Changes Since Last Day</th>
     </tr>
     <tr th:each="locationStat : ${locationStats}">
         <td th:text="${locationStat.state}"></td>
         <td th:text="${locationStat.country}"></td>
+        <td th:text="${locationStat.latiLongi}"></td>
         <td th:text="${locationStat.latestTotalCases}">0</td>
         <td th:text="${locationStat.diffFromPreviousDay}">0</td>
     </tr>

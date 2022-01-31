@@ -4,8 +4,10 @@ public class LocationStats {
 
     private String state;
     private String country;
+    private String latiLongi;
     private int latestTotalCases;
     private int diffFromPreviousDay;
+
 
     public int getDiffFromPreviousDay() {
         return diffFromPreviousDay;
@@ -27,6 +29,10 @@ public class LocationStats {
         return latestTotalCases;
     }
 
+    public String getLatiLongi() {
+        return latiLongi;
+    }
+
     public void setState(String state) {
         this.state = state;
     }
@@ -39,11 +45,18 @@ public class LocationStats {
         this.latestTotalCases = latestTotalCases;
     }
 
+    public void setLatLong(String lati, String longi) {
+        this.latiLongi = lati + "," + longi;
+    }
+
+
+
     @Override
     public String toString() {
         return "LocationStats{" +
                 "state='" + state + '\'' +
                 ", country='" + country + '\'' +
+                ", lat/long='" + latiLongi + '\'' +
                 ", latestTotalCases=" + latestTotalCases +
                 '}';
     }
