@@ -27,4 +27,11 @@ public class HomeController {
         return "home";
     }
 
+    @GetMapping("/graphs")
+    public String graphs(Model model) {
+
+
+        return "graphs";
+    }
+
 }
